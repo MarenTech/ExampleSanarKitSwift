@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/MarenTech/SanarKit.git",
       "state" : {
-        "revision" : "0b7279594ed1f982ea1d0a1fb1e7ebbc898e35e6",
-        "version" : "1.0.8"
+        "revision" : "77ae39b1d159814369dec7924aa1d00fda482480",
+        "version" : "1.0.9"
       }
     }
   ],
