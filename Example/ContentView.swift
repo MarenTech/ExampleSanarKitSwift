@@ -39,9 +39,8 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(alignment: .leading, spacing: 16) {
-                
                 Text("Example App")
                     .padding(.top, 20)
                     .padding(.bottom, 10)
@@ -49,8 +48,6 @@ struct ContentView: View {
                     .font(.title)
                     .underline()
                     .frame(maxWidth: .infinity, alignment: .center)
-                    
-                    
                 HStack {
                     Button(action: {
                         connectToSanar()
@@ -75,38 +72,33 @@ struct ContentView: View {
                 
                 GeometryReader { geometry in
                     let width = (geometry.size.width / 2) - 20
-                    let height: CGFloat = 100  // Set a fixed height for each card
+                    let _: CGFloat = 100
                     
                     LazyVGrid(columns: [GridItem(.fixed(width)), GridItem(.fixed(width))], spacing: 16) {
                         
-                        NavigationLink(
-                            destination:
-                                SanarKit.ServiceView(isNavigationActive: $isService),
-                            isActive: $isService
-                        ) {
+                        Button {
+                            isService = true
+                        } label: {
                             VStack {
                                 Image(systemName: "cart.fill")
                                 Text("Book Service")
                                     .foregroundColor(.blue)
                             }
                             .padding()
-                            .frame(width: width, height: height)
                             .background(Color.white)
                             .cornerRadius(10)
                             .shadow(radius: 5)
                         }
                         
-                        NavigationLink(
-                            destination: SanarKit.BookingListView(isNavigationActive: $isBooking),
-                            isActive: $isBooking
-                        ) {
+                        Button {
+                            isBooking = true
+                        } label: {
                             VStack {
                                 Image(systemName: "list.bullet")
                                 Text("Appointments")
                                     .foregroundColor(.blue)
                             }
                             .padding()
-                            .frame(width: width, height: height)
                             .background(Color.white)
                             .cornerRadius(10)
                             .shadow(radius: 5)
@@ -115,6 +107,12 @@ struct ContentView: View {
                     .padding()
                 }
                 .frame(height: 300)
+                .navigationDestination(isPresented: $isService) {
+                    SanarKit.ServiceView(isNavigationActive: $isService)
+                }
+                .navigationDestination(isPresented: $isBooking) {
+                    SanarKit.BookingListView(isNavigationActive: $isBooking)
+                }
             }
             .padding()
             .onAppear() {
