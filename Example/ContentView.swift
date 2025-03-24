@@ -4,6 +4,7 @@ import SanarKit
 struct ContentView: View {
     @State private var isService: Bool = false
     @State private var isBooking: Bool = false
+    @State private var isConsultation: Bool = false
     @State private var sanar = SKManager()
     @State private var authToken: String?
     @State private var isLoading: Bool = false
@@ -103,6 +104,20 @@ struct ContentView: View {
                             .cornerRadius(10)
                             .shadow(radius: 5)
                         }
+                        
+                        Button {
+                            isConsultation = true
+                        } label: {
+                            VStack {
+                                Image(systemName: "person.fill")
+                                Text("Consultation")
+                                    .foregroundColor(.blue)
+                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                        }
                     }
                     .padding()
                 }
@@ -112,6 +127,11 @@ struct ContentView: View {
                 }
                 .navigationDestination(isPresented: $isBooking) {
                     SanarKit.BookingListView(isNavigationActive: $isBooking)
+                }
+                .navigationDestination(isPresented: $isConsultation) {
+                    SanarKit.ConsultationView(
+                        consultationData: [ "dId": "doctor_id", "aId": "appointment_id"]
+                    )
                 }
             }
             .padding()
