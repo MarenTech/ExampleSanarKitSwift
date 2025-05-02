@@ -4,6 +4,7 @@ import SanarKit
 struct ContentView: View {
     @State private var isService: Bool = false
     @State private var isBooking: Bool = false
+    @State private var isInstantService: Bool = false
     @State private var isConsultation: Bool = false
     @State private var sanar = SKManager()
     @State private var authToken: String?
@@ -86,6 +87,22 @@ struct ContentView: View {
                                     .foregroundColor(.blue)
                             }
                             .padding()
+                            .frame(width: width, height: 90)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                        }
+                        
+                        Button {
+                            isInstantService = true
+                        } label: {
+                            VStack {
+                                Image(systemName: "cart.fill")
+                                Text("Instant Service")
+                                    .foregroundColor(.blue)
+                            }
+                            .padding()
+                            .frame(width: width, height: 90)
                             .background(Color.white)
                             .cornerRadius(10)
                             .shadow(radius: 5)
@@ -100,6 +117,7 @@ struct ContentView: View {
                                     .foregroundColor(.blue)
                             }
                             .padding()
+                            .frame(width: width, height: 90)
                             .background(Color.white)
                             .cornerRadius(10)
                             .shadow(radius: 5)
@@ -114,6 +132,7 @@ struct ContentView: View {
                                     .foregroundColor(.blue)
                             }
                             .padding()
+                            .frame(width: width, height: 90)
                             .background(Color.white)
                             .cornerRadius(10)
                             .shadow(radius: 5)
@@ -124,6 +143,9 @@ struct ContentView: View {
                 .frame(height: 300)
                 .navigationDestination(isPresented: $isService) {
                     SanarKit.ServiceView(isNavigationActive: $isService)
+                }
+                .navigationDestination(isPresented: $isInstantService) {
+                    SanarKit.InstantConsultationView(isNavigationActive: $isInstantService)
                 }
                 .navigationDestination(isPresented: $isBooking) {
                     SanarKit.BookingListView(isNavigationActive: $isBooking)
