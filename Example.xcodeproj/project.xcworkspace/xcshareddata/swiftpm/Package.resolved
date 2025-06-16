@@ -1,13 +1,13 @@
 {
-  "originHash" : "eaf37708784bbcc83dd5c6bb9c1b89cd82b52873ae510e8a8bde1bd2732014ed",
+  "originHash" : "3bad76ce0c37dfceb3576111e1d235cd11db90237cee608a53f156f67e4f811e",
   "pins" : [
     {
       "identity" : "sanarkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MarenTech/SanarKit.git",
+      "location" : "https://github.com/MarenTech/SanarKit",
       "state" : {
-        "revision" : "c2af7857db1a06964cbb658efe829e7a17d11c6c",
-        "version" : "1.1.6"
+        "revision" : "f85838e07cc30b3b44fac84dc19faa2f4298e057",
+        "version" : "1.1.9"
       }
     }
   ],

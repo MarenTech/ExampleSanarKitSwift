@@ -12,16 +12,16 @@ struct ContentView: View {
     @State private var errorMessage: String?
     
     let clientData: [String: Any] = [
-        "first_name": "John",
-        "last_name": "Doe",
+        "first_name": "Aziz",
+        "last_name": "Abdul",
         "dob": "1990-01-01",
         "gender": "M",
         "nationality": "Saudi Arabia",
-        "document_id": "2469433220",
-        "mid": "MG2",
+        "document_id": "12345678",
         "document_type": 1,
+        "mid": "BC1",
         "phone_code": "91",
-        "phone_no": "81794771111",
+        "phone_no": "7097951801",
         "maritalStatus": "0"
     ]
     
@@ -152,6 +152,7 @@ struct ContentView: View {
                 }
                 .navigationDestination(isPresented: $isConsultation) {
                     SanarKit.ConsultationView(
+                        isNavigationActive: $isConsultation,
                         consultationData: [ "dId": "doctor_id", "aId": "appointment_id"]
                     )
                 }
