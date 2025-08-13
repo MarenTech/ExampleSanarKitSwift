@@ -91,17 +91,6 @@ struct ContentView: View {
                             
                             // Connection Status Card
                             VStack(spacing: 12) {
-//                                HStack {
-//                                    Image(systemName: "wifi")
-//                                        .foregroundColor(.cyan)
-//                                        .font(.title2)
-//                                    
-//                                    Text("Connection Status")
-//                                        .font(.headline)
-//                                        .fontWeight(.semibold)
-//                                    
-//                                    Spacer()
-//                                }
                                 
                                 HStack(spacing: 16) {
                                     Button(action: {
@@ -176,7 +165,7 @@ struct ContentView: View {
                         
                         // Services Grid
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("Legacy Modules")
+                            Text("Sanar Modules")
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .foregroundColor(.primary)
@@ -185,14 +174,6 @@ struct ContentView: View {
                                 GridItem(.flexible(), spacing: 16),
                                 GridItem(.flexible(), spacing: 16)
                             ], spacing: 16) {
-                                
-                                // Book Service Card
-                                ServiceCard(
-                                    icon: "stethoscope",
-                                    title: "Book Service",
-                                    subtitle: "Schedule medical services",
-                                    action: { isService = true }
-                                )
                                 
                                 // Instant Service Card
                                 ServiceCard(
@@ -208,14 +189,6 @@ struct ContentView: View {
                                     title: "Appointments",
                                     subtitle: "Manage your bookings",
                                     action: { isBooking = true }
-                                )
-                                
-                                // Consultation Card
-                                ServiceCard(
-                                    icon: "person.2.fill",
-                                    title: "Consultation",
-                                    subtitle: "Talk to specialists",
-                                    action: { isConsultation = true }
                                 )
                             }
                         }
