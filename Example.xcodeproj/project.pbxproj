@@ -11,7 +11,7 @@
 		9A80EA172C82EDB100C88D69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80EA162C82EDB100C88D69 /* ContentView.swift */; };
 		9A80EA192C82EDB200C88D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A80EA182C82EDB200C88D69 /* Assets.xcassets */; };
 		9A80EA1C2C82EDB200C88D69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A80EA1B2C82EDB200C88D69 /* Preview Assets.xcassets */; };
-		9AC04B152E0009EA00E6348E /* SanarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9AC04B142E0009EA00E6348E /* SanarKit */; };
+		9ADC995F2E4B35DB006CEB89 /* SanarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9ADC995E2E4B35DB006CEB89 /* SanarKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AC04B152E0009EA00E6348E /* SanarKit in Frameworks */,
+				9ADC995F2E4B35DB006CEB89 /* SanarKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				9AC04B142E0009EA00E6348E /* SanarKit */,
+				9ADC995E2E4B35DB006CEB89 /* SanarKit */,
 			);
 			productName = Example;
 			productReference = 9A80EA112C82EDB100C88D69 /* Example.app */;
@@ -131,7 +131,7 @@
 			);
 			mainGroup = 9A80EA082C82EDB100C88D69;
 			packageReferences = (
-				9AC04B132E0009EA00E6348E /* XCRemoteSwiftPackageReference "SanarKit" */,
+				9ADC995D2E4B35DB006CEB89 /* XCRemoteSwiftPackageReference "SanarKit" */,
 			);
 			productRefGroup = 9A80EA122C82EDB100C88D69 /* Products */;
 			projectDirPath = "";
@@ -376,20 +376,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9AC04B132E0009EA00E6348E /* XCRemoteSwiftPackageReference "SanarKit" */ = {
+		9ADC995D2E4B35DB006CEB89 /* XCRemoteSwiftPackageReference "SanarKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MarenTech/SanarKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.9;
+				minimumVersion = 2.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9AC04B142E0009EA00E6348E /* SanarKit */ = {
+		9ADC995E2E4B35DB006CEB89 /* SanarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9AC04B132E0009EA00E6348E /* XCRemoteSwiftPackageReference "SanarKit" */;
+			package = 9ADC995D2E4B35DB006CEB89 /* XCRemoteSwiftPackageReference "SanarKit" */;
 			productName = SanarKit;
 		};
 /* End XCSwiftPackageProductDependency section */
